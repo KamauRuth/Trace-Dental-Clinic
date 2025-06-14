@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    #thankYou {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .checkmark-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkmark {
+      color: white;
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Appointment form -->
+<div class="appointment" style="background-image: url('./assets/images/hero-bg.png')">
+  <form id="appointmentForm" class="appointment-form">
+    <h2>Book an Appointment</h2>
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <input type="text" name="contact" placeholder="Your Contact" required><br>
+    <input type="date" name="date" required><br>
+    <button type="submit">Book Appointment</button>
+  </form>
+</div>
+
+  <!-- Thank you message (initially hidden) -->
+  <div id="thankYou">
+    <div class="checkmark-circle">
+      <span class="checkmark">✔</span>
+    </div>
+    <p>Thank you! Your appointment has been submitted.</p>
+    <button onclick="window.location.href='index.html'" style="
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: deepskyblue;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      ">Return to Home</button>
+</div>
+
+  <!-- JavaScript -->
+  <script>
+    const scriptURL = 'http://localhost:5000/api/appointment';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('appointmentForm');
+      const thankYou = document.getElementById('thankYou');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          contact: formData.get('contact'),
+          date: formData.get('date'),
+        };
+
+        fetch(scriptURL, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
+        .then(res => res.json())
+        .then(response => {
+          if (response.result === "success") {
+            form.style.display = "none"; // hide the form
+            thankYou.style.display = "flex"; // show thank you message
+          } else {
+            alert("Failed to submit. Try again.");
+          }
+        })
+        .catch(error => {
+          console.error("Submission error:", error);
+          alert("Error submitting form.");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

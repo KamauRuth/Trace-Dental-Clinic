@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trace Dental Clinic</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">Trace Dental Clinic.</a>
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="appointment.html" class="btn" >Book appointment</a>
+
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" 
+        aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">We Are The Best Dental Clinic</h1>
+
+            <p class="hero-text">
+              At Trace Dental Clinic, we prioritize the oral health and well-being of your family.
+            </p>
+
+            <form id="callbackForm" class="hero-form">
+              <input type="text" name="name" aria-label="Name" placeholder="Your Names" required class="name">
+              <input type="text" name="contact" aria-label="Contact" placeholder="Your Phone Number..." required class="contact">
+              <button type="submit" class="hero-btn">Get Call Back</button>
+            </form>
+
+          <!-- This is the thank you message that will be shown after successful submission -->
+            <div id="thankYou" style="display: none;">
+              <div class="checkmark">&#10004;</div>
+              <p>Thank you! We'll call you back soon.</p>
+            </div>
+
+
+
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/doc.png" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Services</p>
+
+          <h2 class="h2 section-title text-center">What We Provide</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Root Canal Treatment</h3>
+
+                  <p class="card-text">
+                    A procedure to remove infected pulp from inside the tooth, relieving pain and saving the natural tooth.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+            
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Teeth Whitening</h3>
+
+                  <p class="card-text">
+                    A cosmetic treatment that brightens and removes stains from your teeth for a whiter smile.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Teeth Extraction</h3>
+
+                  <p class="card-text">
+                    The removal of severely damaged or decayed teeth to maintain overall oral health
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Teeth Replacement</h3>
+
+                  <p class="card-text">
+                    Restores missing teeth using dentures, bridges, or implants for improved function and appearance.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Gum Treatment</h3>
+
+                  <p class="card-text">
+                    Helps manage gum diseases like gingivitis and periodontitis to ensure healthy gums.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-2.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Dental Implants</h3>
+
+                  <p class="card-text">
+                    A long-term solution for missing teeth, using artificial roots to support crowns or dentures.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+            <!-- <li class="service-banner">
+              <figure>
+                <img src="./assets/images/service-banner.png" width="700" height="867" loading="lazy"
+                  alt="service banner" class="w-100">
+              </figure>
+            </li> -->
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-3.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Dental braces</h3>
+
+                  <p class="card-text">
+                    Orthodontic devices used to align and straighten teeth for a healthier bite and better smile.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-4.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Oral Hygiene</h3>
+
+                  <p class="card-text">
+                    Preventive care that includes regular cleaning, brushing, and dental checkups to maintain a healthy mouth.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-5.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Live Advisory</h3>
+
+                  <p class="card-text">
+                    Real-time consultation with dental professionals to answer questions and guide treatment.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-6.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Paediatric Dentistry</h3>
+
+                  <p class="card-text">
+                    Specialized dental care focused on the unique needs of children and young patients.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="stats">
+  
+
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img  class = "banner" src="./assets/images/work2.jpg" width="500" height="638" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">We Care For Your Dental Health</h2>
+
+            <p class="section-text section-text-1">
+              Located at the heart of Kiambaa, Kiambu County Trace Dental Clinic, is your ultimate walk-in 
+              facility for all dental services. We aim to provide affordable and professional dental 
+              care to  all clients.
+
+            </p>
+
+            <p class="section-text">
+              Our dental procedures are tailored to meet all our customers’ needs while
+              utilizing the latest cutting edge technology and infection control protocols.
+              With over 10 years’ experience in dental care, we aim not just to alleviate the
+              pain but to improve overall quality of life for all. We invite you to join our 
+              mission of sharpening smiles and touching lives as you experience holistic and 
+              comprehensive services at amazingly affordable prices.
+            </p>
+
+            <a href="#" class="btn">Read more</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Blog</p>
+
+          <h2 class="h2 section-title text-center">Latest Blog & News</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                    alt="Cras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Cras accumsan nulla nec lacus ultricies placerat.</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.
+                  </p>
+
+                  <a href="#" class="card-link">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                    alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Dras accumsan nulla nec lacus ultricies placerat.</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.
+                  </p>
+
+                  <a href="#" class="card-link">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                    alt="Seas accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Seas accumsan nulla nec lacus ultricies placerat.</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.
+                  </p>
+
+                  <a href="#" class="card-link">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+        <!-- 
+        - #CTA
+      -->
+
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+
+          <figure class="cta-banner">
+            <img src="./assets/images/cta-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+
+          <div class="cta-content">
+
+            <p class="section-subtitle">Book Dental Appointment</p>
+
+            <h2 class="h2 section-title">We Are open And Welcoming Patients</h2>
+            <a href="appointment.html" class="btn">Book Appointment</a>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" >
+
+    <div class="footer-top section" style="background-image: url('./assets/images/hero-bg.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Trace Dental Clinic.</a>
+
+          <li>
+            <p class="footer-list-title">Business Hours</p>
+          </li>
+
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+
+            <span class="span">
+              Monday - Saturday:<br>
+              9:00am - 10:00Pm
+            </span>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Services</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Project</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Our Team</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Latest Blog</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Root Canal Treatment</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Teeth Whitening</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Teeth Replacement</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Teeth Extraction</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Gum Treatment</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Dental Implants</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Dental Braces</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Oral Hygiene</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Live Advisory</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Paediatric Dentistry</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="item-text">
+              1247/Plot No. 39<br>
+              Kiambaa, Kiambu County
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+917052101786" class="footer-link">0712345678</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:help@example.com" class="footer-link">abc@gmail.com</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025 All Rights Reserved by TraceDentalClinic.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
