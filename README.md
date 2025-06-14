@@ -109,7 +109,9 @@ Open `public/index.html` in your browser.
 
 | Booking Form                  | Confirmation Message                |
 | ----------------------------- | ----------------------------------- |
-| ![Form](screenshots/form.png) | ![Success](screenshots/success.png) |
+| ![image](https://github.com/user-attachments/assets/b8cce1c0-34b1-4417-be49-a6fe9a6f3c56)
+ |![image](https://github.com/user-attachments/assets/e1e3ddf6-7ff4-46db-b889-e54a8f350c62)
+ |
 
 ---
 
