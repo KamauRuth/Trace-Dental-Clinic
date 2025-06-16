@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, "../Frontend")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
-
+t
 // Serve appointment.html for "/appointment"
 app.get("/appointment", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/appointment.html"));

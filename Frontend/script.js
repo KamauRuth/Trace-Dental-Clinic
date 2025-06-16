@@ -62,7 +62,7 @@ window.addEventListener("scroll", function () {
 
 
 // call back form
-const callbackURL = 'http://localhost:5000/api/callback';
+const callbackURL = '/api/callback';
 
   document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('callbackForm');
@@ -77,7 +77,7 @@ const callbackURL = 'http://localhost:5000/api/callback';
       contact: formData.get('contact'),
     };
 
-    fetch('http://localhost:5000/api/callback', {
+    fetch(callbackURL, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
