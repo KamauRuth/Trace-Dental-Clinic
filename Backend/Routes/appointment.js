@@ -1,7 +1,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 const Appointment = require('../models/appointmentModel.js');
 

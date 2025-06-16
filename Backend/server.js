@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-import { Resend } from 'resend';
+
 
 require('dotenv').config();
 
@@ -57,12 +57,3 @@ app.listen(PORT, () => {
 
 
 
-
-const resend = new Resend('re_ix7YTLKU_PA2WLgwjrNYTm3V8UfviD4rx');
-
-resend.emails.send({
-  from: 'onboarding@resend.dev',
-  to: 'rkamau573@gmail.com',
-  subject: 'Hello World',
-  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-});
