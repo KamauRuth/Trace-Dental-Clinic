@@ -1,6 +1,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+import { Resend } from 'resend';
 
 const Appointment = require('../models/appointmentModel.js');
 
@@ -21,7 +22,18 @@ router.post('/', async (req, res) => {
         });
         
         await newAppointment.save();
+
+        const resend = new Resend('re_ix7YTLKU_PA2WLgwjrNYTm3V8UfviD4rx');
+
+        resend.emails.send({
+        from: 'onboarding@resend.dev',
+        to: email,
+        subject: 'Hello World',
+        html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+        });
         res.status(201).json({ result: 'success', message: 'Appointment created successfully' });
+
+
     } catch (error) {
         res.status(500).json({ result: 'error', message: error.message });
         }
