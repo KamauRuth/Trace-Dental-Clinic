@@ -28,7 +28,8 @@ router.post('/', async (req, res) => {
         resend.emails.send({
         from: 'onboarding@resend.dev',
         to: email,
-        subject: 'Hello World',
+        subject: 'Appointment Confirmation',
+        text: `Hello ${name},\n\nYour appointment has been successfully created for ${date}.\n\nThank you!`,
         html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
         });
         res.status(201).json({ result: 'success', message: 'Appointment created successfully' });
