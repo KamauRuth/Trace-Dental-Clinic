@@ -52,6 +52,13 @@ const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 
 
+
+toggleBtn.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+  });
+
+
+
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 100) {
     header.classList.add("active");
