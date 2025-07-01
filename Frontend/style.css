@@ -249,14 +249,15 @@ body {
 .header-top,
 .header-bottom .btn { display: none; }
 
+
 .header-bottom {
-  margin-top: -30px;
+  margin-top: -70px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
   padding-block: 15px;
+  background-color: var(--deep-sky-blue);
   z-index: 4;
   
 }
@@ -1110,7 +1111,7 @@ body {
     
   }
 
-  .header-bottom.active { top: -95px; }
+  .header-bottom.active { top: -35px; }
 
   .nav-toggle-btn { display: none; }
 
