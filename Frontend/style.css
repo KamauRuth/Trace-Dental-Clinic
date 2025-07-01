@@ -288,13 +288,7 @@ body {
 
 }
 
-.logo {
-  background-image: url(../assets/images/tracelogo.jpg);
-  color: var(--kc-royals-blue);
-  font-family: var(--ff-poppins);
-  font-size: 3rem;
-  font-weight: var(--fw-500);
-}
+
 
 .nav-toggle-btn {
   color: var(--black);
