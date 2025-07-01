@@ -534,11 +534,24 @@ body {
 
 
 .blog-header {
-  background-color: var(--royal-blue-light);
+  background-color: var(--deep-sky-blue);
   padding-block: 50px;
   color: var(--white);
 }
 
+.blog-header .h1{
+  font-size: var(--fs-2);
+  font-weight: var(--fw-500);
+  margin-block-end: 15px;
+  color: var(--black);
+}
+
+.blog-header .section-subtitle {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  margin-block-end: 30px;
+  color: var(--white);
+}
 .blog .section-title { margin-block-end: 50px; }
 
 .blog-list {
@@ -781,7 +794,7 @@ body {
 .blog-card h2 {
   font-size: 2.4rem;
   font-family: var(--ff-poppins);
-  color: var(--oxford-blue-1);
+  color: var(--white);
   margin-bottom: 15px;
 }
 
