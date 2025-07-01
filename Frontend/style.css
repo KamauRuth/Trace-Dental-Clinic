@@ -251,7 +251,7 @@ body {
 
 
 .header-bottom {
-  margin-top: -70px;
+  margin-top: -80px;
   position: absolute;
   top: 0;
   left: 0;
@@ -271,12 +271,16 @@ body {
   
 }
 
+
+
+
 @keyframes slideIn {
   0% { transform: translateY(0); }
   100% { transform: translateY(100%); }
 }
 
 .header-bottom > .container {
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1111,7 +1115,7 @@ body {
     
   }
 
-  .header-bottom.active { top: -35px; }
+  .header-bottom.active { top: -30px; }
 
   .nav-toggle-btn { display: none; }
 
