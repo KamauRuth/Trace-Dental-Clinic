@@ -2,32 +2,36 @@ const express = require('express');
 const chatRouter = express.Router();
 require('dotenv').config();
 
-const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Initialize Gemini client with your API key
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
-chatRouter.post("/", async (req, res) => {
+chatRouter.post('/', async (req, res) => {
   const { message } = req.body;
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
-
-    const result = await model.generateContent({
-      contents: [
-        {
-          role: "user",
-          parts: [{ text: message }],
-        },
-      ],
+    const mistralResponse = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.MISTRAL_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'mistral-tiny',  // you can use 'mistral-medium' or other available models
+        messages: [
+          { role: 'system', content: 'You are a helpful assistant.' },
+          { role: 'user', content: message }
+        ]
+      })
     });
 
-    const botReply = result.response.text();
-    res.json({ reply: botReply });
+    const data = await mistralResponse.json();
+    console.log(data); // For debugging
+
+    const reply = data.choices[0].message.content;
+
+    res.json({ reply });
 
   } catch (err) {
-    console.error("Gemini error:", err);
-    res.json({ reply: "Sorry! The chatbot could not reply right now." });
+    console.error(err);
+    res.status(500).json({ error: 'Failed to contact Mistral' });
   }
 });
 
