@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-
 require('dotenv').config();
 
 // Database configuration
@@ -10,7 +9,7 @@ const dbConfig = require("./config/dbconfig.js");
 
 const router = require('./Routes/appointment.js');
 const callRouter = require('./Routes/callback.js');
-
+const chatRouter = require('./Routes/chatbot.js');
 
 const app = express();
 
@@ -24,8 +23,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Middleware setup
-app.use(express.json());
-  // To parse JSON bodies
+app.use(express.json());  // To parse JSON bodies
 
 const PORT = process.env.PORT || 5000;
 
@@ -34,6 +32,7 @@ const PORT = process.env.PORT || 5000;
 // Routes
 app.use('/api/appointment', router);
 app.use('/api/callback', callRouter);
+app.use('/api/chatbot', chatRouter);
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -54,6 +53,3 @@ app.get("/appointment", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
-

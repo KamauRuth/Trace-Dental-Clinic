@@ -765,6 +765,68 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <!-- Floating Chatbot Icon -->
+<div id="chatbot-icon" style="
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;">
+  <span style="color: white; font-size: 30px;">💬</span>
+</div>
+
+<!-- Chat Container -->
+<div id="chat-container" style="
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 9998;">
+  
+  <div style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;">
+    <strong>Assistant</strong>
+    <button id="chat-close" style="
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;">&times;</button>
+  </div>
+
+  <div id="chatbox" style="padding: 10px; height: 200px; overflow-y: auto;"></div>
+
+  <form id="chat-form" style="display: flex; border-top: 1px solid #ddd;">
+    <input id="chat-input" type="text" placeholder="Type a message..." style="flex: 1; padding: 10px; border: none;">
+    <button type="submit" style="padding: 10px; background: #007bff; color: white; border: none;">Send</button>
+  </form>
+</div>
+
+
+
+
+
+
 </body>
 
 </html>
