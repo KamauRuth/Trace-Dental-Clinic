@@ -50,7 +50,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// ✅ ✅ ✅ MAIN DOM LOADED BLOCK ✅ ✅ ✅
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // -- Call back form --
@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ✅ -- Chatbot --
 // ✅ -- Chatbot --
 const chatbotIcon = document.getElementById('chatbot-icon');
 const chatContainer = document.getElementById('chat-container');
@@ -118,7 +117,7 @@ if (chatForm && input && chatbox) {
     input.value = '';
 
     try {
-      const response = await fetch('/api/chatbot', {
+      const response = await fetch('https://trace-dental-clinic.onrender.com/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message })
