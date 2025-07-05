@@ -262,11 +262,12 @@ body {
 
 .header.active {
   position: fixed;
-  top: -81px;
+  top: -108px;
   background-color: var(--deep-sky-blue);
   box-shadow: var(--shadow-2);
   animation: slideIn 0.5s var(--cubic-out) forwards;
 }
+
 
 @keyframes slideIn {
   0% { transform: translateY(0); }
@@ -1083,7 +1084,7 @@ body {
     
   }
 
-  .header.active { top: -30px; }
+  /* .header.active { top: -30px; } */
 
   .nav-toggle-btn { display: none; }
 
@@ -1228,7 +1229,6 @@ body {
    * HEADER
    */
 
-  .contact-list { gap: 30px; }
 
   .header .btn { padding: 18px 30px; }
 
