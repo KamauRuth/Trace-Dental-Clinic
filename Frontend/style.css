@@ -248,7 +248,7 @@ body {
   #HEADER
 \*-----------------------------------*/
 
-.btn { display: none; }
+/* .btn { display: none; } */
 
 .header {
   position: fixed;
