@@ -31,6 +31,26 @@ const services = [
     title: 'Paediatric Dentistry',
     text: 'Specialized dental care focused on the unique needs of children and young patients.',
   },
+  {
+    icon: '✨',
+    title: 'Teeth Cleaning & Polishing',
+    text: 'A dental procedure that removes plaque, tartar, and stains from teeth, leaving them clean, smooth, and shiny.',
+  },
+  {
+    icon: '🦷',
+    title: 'Dental Braces',
+    text: 'Orthodontic devices used to align and straighten teeth for a healthier bite and better smile.',
+  },
+  {
+    icon: '🪥',
+    title: 'Oral Hygiene',
+    text: 'Preventive care that includes regular cleaning, brushing, and dental checkups to maintain a healthy mouth.',
+  },
+  {
+    icon: '💬',
+    title: 'Live Advisory',
+    text: 'Real-time consultation with dental professionals to answer questions and guide treatment.',
+  },
 ];
 
 const blogs = [
@@ -60,7 +80,7 @@ export default function HomePage() {
         <div className="container site-header-inner">
           <Link href="/" className="brand" aria-label="Trace Dental Clinic home">
             <img className="brand-logo" src="/assets/images/tracelogo.png" alt="Trace Dental Clinic logo" />
-            <span className="brand-copy">
+            <span className="brand-copy brand-copy-desktop">
               <span className="brand-title">Trace Dental Clinic</span>
               <span className="brand-slogan">Gentle care for brighter smiles.</span>
             </span>
@@ -83,33 +103,25 @@ export default function HomePage() {
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="section-eyebrow">Family-first dental care</p>
+              <div className="hero-brand-block">
+                <img className="hero-brand-logo" src="/assets/images/tracelogo.png" alt="Trace Dental Clinic" />
+                <div className="hero-brand-copy">
+                  <span className="hero-brand-title">Trace Dental Clinic</span>
+                  <span className="hero-brand-slogan">Gentle care for brighter smiles.</span>
+                </div>
+              </div>
+
+              <p className="section-eyebrow hero-eyebrow">Toronto dentist worth smiling about</p>
               <h1 className="hero-title">
-                We shape healthier smiles with <em>gentle, modern care</em>.
+                Welcome to modern, calming dentistry designed for your family.
               </h1>
               <p className="hero-lead">
                 Trace Dental Clinic offers preventive dentistry, restorative treatment, and comfortable visits for the whole family.
               </p>
-              <div className="hero-badges">
-                <span className="badge">Same-day appointments</span>
-                <span className="badge">Child-friendly care</span>
-                <span className="badge">Walk-ins accepted</span>
-              </div>
-            </div>
-
-            <div className="hero-panel">
-              <div className="hero-image">
-                <img src="/assets/images/hero.jpg" alt="Trace Dental Clinic hero" />
-              </div>
-              <div className="panel-grid">
-                <div className="stat-card">
-                  <strong>10+ years</strong>
-                  <span>of local care experience</span>
-                </div>
-                <div className="stat-card">
-                  <strong>8:00am - 5:00pm</strong>
-                  <span>Monday to Saturday</span>
-                </div>
+              <div className="hero-badges hero-actions-mobile">
+                <Link href="/appointment" className="badge badge-action">Book appointment</Link>
+                <Link href="tel:+254795512428" className="badge badge-action">Phone</Link>
+                <Link href="#footer" className="badge badge-action">Directions</Link>
               </div>
             </div>
           </div>

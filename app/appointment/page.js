@@ -19,6 +19,10 @@ const services = [
   'Gum Treatment',
   'Paediatric Dentistry',
   'Teeth Scaling and Polishing',
+  'Teeth Cleaning & Polishing',
+  'Dental Braces',
+  'Oral Hygiene',
+  'Live Advisory',
   'Consultation',
 ];
 
