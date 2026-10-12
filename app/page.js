@@ -79,7 +79,7 @@ export default function HomePage() {
       <header className="site-header">
         <div className="container site-header-inner">
           <Link href="/" className="brand" aria-label="Trace Dental Clinic home">
-            <img className="brand-logo" src="/assets/images/tracelogo.png" alt="Trace Dental Clinic logo" />
+            <img className="brand-logo" src="/assets/images/trace-logo.jpg" alt="Trace Dental Clinic logo" />
             <span className="brand-copy brand-copy-desktop">
               <span className="brand-title">Trace Dental Clinic</span>
               <span className="brand-slogan">Gentle care for brighter smiles.</span>
@@ -96,6 +96,23 @@ export default function HomePage() {
 
             <Link href="/appointment" className="nav-cta header-book">Book appointment</Link>
           </div>
+
+          <details className="mobile-nav">
+            <summary className="nav-toggle" aria-label="Open navigation menu">
+              <span className="nav-toggle-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+            <nav className="mobile-nav-panel" aria-label="Mobile navigation">
+              <Link href="#services">Services</Link>
+              <Link href="#about">About</Link>
+              <Link href="/blogs">Blog</Link>
+              <Link href="#footer">Contact</Link>
+              <Link href="/appointment" className="nav-cta mobile-nav-cta">Book appointment</Link>
+            </nav>
+          </details>
         </div>
       </header>
 
@@ -103,15 +120,6 @@ export default function HomePage() {
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <div className="hero-brand-block">
-                <img className="hero-brand-logo" src="/assets/images/tracelogo.png" alt="Trace Dental Clinic" />
-                <div className="hero-brand-copy">
-                  <span className="hero-brand-title">Trace Dental Clinic</span>
-                  <span className="hero-brand-slogan">Gentle care for brighter smiles.</span>
-                </div>
-              </div>
-
-              <p className="section-eyebrow hero-eyebrow">Toronto dentist worth smiling about</p>
               <h1 className="hero-title">
                 Welcome to modern, calming dentistry designed for your family.
               </h1>
@@ -123,6 +131,14 @@ export default function HomePage() {
                 <Link href="tel:+254795512428" className="badge badge-action">Phone</Link>
                 <Link href="#footer" className="badge badge-action">Directions</Link>
               </div>
+            </div>
+
+            <div className="hero-visual">
+              <img
+                className="hero-image"
+                src="/assets/images/hero.jpg"
+                alt="A smiling patient relaxing in a dental chair"
+              />
             </div>
           </div>
         </section>
@@ -210,7 +226,7 @@ export default function HomePage() {
           <div className="footer-grid">
             <div className="footer-card">
               <div className="brand" style={{ marginBottom: '0.75rem' }}>
-                <img className="brand-logo brand-logo-footer" src="/assets/images/tracelogo.png" alt="Trace Dental Clinic logo" />
+                <img className="brand-logo brand-logo-footer" src="/assets/images/trace-logo.jpg" alt="Trace Dental Clinic logo" />
                 <span className="brand-copy">Trace Dental Clinic</span>
               </div>
               <p>Kiambaa Stage, Kiambu County</p>
