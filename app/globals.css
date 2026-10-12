@@ -1214,3 +1214,13 @@ main {
     width: auto;
   }
 }
+
+/* Keep all primary page surfaces within the blue palette. */
+.site-header,
+.mobile-nav-panel {
+  background: #edf6ff;
+}
+
+.hero {
+  background: linear-gradient(180deg, #edf6ff 0%, #dceeff 100%);
+}
