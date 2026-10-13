@@ -126,11 +126,6 @@ export default function HomePage() {
               <p className="hero-lead">
                 Trace Dental Clinic offers preventive dentistry, restorative treatment, and comfortable visits for the whole family.
               </p>
-              <div className="hero-badges hero-actions-mobile">
-                <Link href="/appointment" className="badge badge-action">Book appointment</Link>
-                <Link href="tel:+254795512428" className="badge badge-action">Phone</Link>
-                <Link href="#footer" className="badge badge-action">Directions</Link>
-              </div>
             </div>
 
             <div className="hero-visual">

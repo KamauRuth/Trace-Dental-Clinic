@@ -61,67 +61,58 @@ export default function AppointmentPage() {
   };
 
   return (
-    <main className="page-shell">
+    <main className="page-shell appointment-page">
       <div className="container">
-        <div className="page-heading">
-          <p className="section-eyebrow">Appointment booking</p>
-          <h1 className="section-title">Schedule your dental visit</h1>
-          <p className="section-copy">
-            Fill in your details and our team will review your request and get back to you shortly.
-          </p>
-        </div>
+        <header className="appointment-header">
+          <Link href="/" className="appointment-back" aria-label="Return to home page">← Back home</Link>
+          <div className="appointment-header-copy">
+            <p className="section-eyebrow">Appointment booking</p>
+            <h1>Schedule your dental visit</h1>
+            <p>
+              Fill in your details and our team will review your request and get back to you shortly.
+            </p>
+          </div>
+        </header>
 
-        <div className="section-grid" style={{ gridTemplateColumns: '1.05fr 0.95fr' }}>
-          <form className="form-card" onSubmit={handleSubmit}>
-            <h2 style={{ marginTop: 0 }}>Appointment details</h2>
+        <div className="appointment-grid">
+          <form className="form-card appointment-form" onSubmit={handleSubmit}>
+            <div className="appointment-form-heading">
+              <span>1</span>
+              <div>
+                <h2>Appointment details</h2>
+                <p>Tell us how we can help you.</p>
+              </div>
+            </div>
             <div className="form-stack">
-              <input
-                className="input"
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required
-                value={form.name}
-                onChange={(event) => setForm({ ...form, name: event.target.value })}
-              />
-              <input
-                className="input"
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-                value={form.email}
-                onChange={(event) => setForm({ ...form, email: event.target.value })}
-              />
-              <input
-                className="input"
-                type="text"
-                name="contact"
-                placeholder="Your contact"
-                required
-                value={form.contact}
-                onChange={(event) => setForm({ ...form, contact: event.target.value })}
-              />
-              <input
-                className="input"
-                type="date"
-                name="date"
-                required
-                value={form.date}
-                onChange={(event) => setForm({ ...form, date: event.target.value })}
-              />
-              <select
-                className="input"
-                name="service"
-                required
-                value={form.service}
-                onChange={(event) => setForm({ ...form, service: event.target.value })}
-              >
-                <option value="">Select a service</option>
-                {services.map((service) => (
-                  <option key={service} value={service}>{service}</option>
-                ))}
-              </select>
+              <label className="field-label">
+                Full name
+                <input className="input" type="text" name="name" placeholder="Enter your full name" required value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} />
+              </label>
+              <div className="appointment-field-row">
+                <label className="field-label">
+                  Email address
+                  <input className="input" type="email" name="email" placeholder="you@example.com" required value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} />
+                </label>
+                <label className="field-label">
+                  Phone number
+                  <input className="input" type="tel" name="contact" placeholder="e.g. 0795 512 428" required value={form.contact} onChange={(event) => setForm({ ...form, contact: event.target.value })} />
+                </label>
+              </div>
+              <div className="appointment-field-row">
+                <label className="field-label">
+                  Preferred date
+                  <input className="input" type="date" name="date" required value={form.date} onChange={(event) => setForm({ ...form, date: event.target.value })} />
+                </label>
+                <label className="field-label">
+                  Dental service
+                  <select className="input" name="service" required value={form.service} onChange={(event) => setForm({ ...form, service: event.target.value })}>
+                    <option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
               <div className="button-row">
                 <button className="button" type="submit" disabled={status === 'submitting'}>
                   {status === 'submitting' ? 'Submitting...' : 'Book appointment'}
@@ -131,12 +122,17 @@ export default function AppointmentPage() {
             </div>
           </form>
 
-          <aside className="notice-card">
-            <div className="success-mark">+</div>
-            <h3 style={{ marginTop: 0 }}>What happens next</h3>
+          <aside className="notice-card appointment-notice">
+            <div className="success-mark" aria-hidden="true">✓</div>
+            <p className="appointment-step">Step 2</p>
+            <h3>What happens next?</h3>
             <p>
               After submission, our team will review your request and confirm your appointment.
             </p>
+            <div className="appointment-contact">
+              <span>Need help booking?</span>
+              <a href="tel:+254795512428">Call +254 795 512 428</a>
+            </div>
             {message ? (
               <div className={`alert ${status === 'success' ? 'alert-success' : 'alert-error'}`} style={{ marginTop: '1rem' }}>
                 {message}

@@ -113,9 +113,9 @@ main {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #f7f2e9;
+  background: #0f4c81;
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(16, 33, 58, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .site-header-inner {
@@ -160,12 +160,12 @@ main {
 }
 
 .brand-title {
-  color: var(--ink);
+  color: #ffffff;
   font-size: 1.05rem;
 }
 
 .brand-slogan {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.76);
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -183,9 +183,9 @@ main {
   width: 2.9rem;
   height: 2.9rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 .mobile-nav {
@@ -234,22 +234,22 @@ main {
   display: grid;
   gap: 0.25rem;
   padding: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 1rem;
-  background: #f7f2e9;
+  background: #0f4c81;
   box-shadow: var(--shadow-md);
 }
 
 .mobile-nav-panel > a:not(.nav-cta) {
   padding: 0.75rem 0.85rem;
   border-radius: 0.75rem;
-  color: var(--ink);
+  color: #ffffff;
   font-weight: 700;
 }
 
 .mobile-nav-panel > a:not(.nav-cta):hover,
 .mobile-nav-panel > a:not(.nav-cta):focus-visible {
-  background: rgba(16, 33, 58, 0.06);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .mobile-nav-cta {
@@ -264,13 +264,13 @@ main {
 }
 
 .site-nav a {
-  color: #10213a;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: #ffffff;
+  color: #bce2ff;
 }
 
 .nav-cta {
@@ -703,6 +703,170 @@ main {
   margin-bottom: 2rem;
 }
 
+.appointment-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #dceeff 0%, #f5faff 55%, #ffffff 100%);
+}
+
+.appointment-header {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: var(--radius-xl);
+  color: #ffffff;
+  background: linear-gradient(135deg, #0c4f91 0%, #167ccc 55%, #2ea0ff 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.appointment-header::after {
+  content: "";
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  right: -4rem;
+  bottom: -7rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.appointment-back {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.appointment-header-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 45rem;
+}
+
+.appointment-header .section-eyebrow {
+  margin-bottom: 0.65rem;
+  color: #d9efff;
+}
+
+.appointment-header h1 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.appointment-header-copy > p:last-child {
+  max-width: 58ch;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.appointment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.65fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.appointment-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.appointment-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.appointment-form-heading > span {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--brand);
+  font-weight: 800;
+}
+
+.appointment-form-heading h2,
+.appointment-form-heading p {
+  margin: 0;
+}
+
+.appointment-form-heading p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field-label {
+  display: grid;
+  min-width: 0;
+  gap: 0.4rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.appointment-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.appointment-notice {
+  position: sticky;
+  top: 7rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  color: #ffffff;
+  background: linear-gradient(160deg, #102f55, #0f5c9e);
+}
+
+.appointment-notice .success-mark {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.appointment-step {
+  margin-bottom: 0.35rem !important;
+  color: #bce2ff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.appointment-notice h3 {
+  margin: 0 0 0.65rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+}
+
+.appointment-notice > p:not(.appointment-step) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.appointment-contact {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.appointment-contact span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+}
+
+.appointment-contact a {
+  font-weight: 800;
+}
+
 .blog-page-hero,
 .notice-card,
 .contact-card {
@@ -1069,7 +1233,16 @@ main {
   }
 
   .brand-copy-desktop {
+    display: flex;
+  }
+
+  .brand-copy-desktop .brand-slogan {
     display: none;
+  }
+
+  .brand-copy-desktop .brand-title {
+    font-size: clamp(0.82rem, 2.5vw, 1rem);
+    white-space: nowrap;
   }
 
   .brand-logo {
@@ -1092,6 +1265,37 @@ main {
 @media (max-width: 780px) {
   body {
     padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+
+  .appointment-page {
+    padding: 1rem 0 2rem;
+  }
+
+  .appointment-header {
+    margin-bottom: 1rem;
+    padding: 1.35rem;
+    border-radius: 1.5rem;
+  }
+
+  .appointment-back {
+    margin-bottom: 2rem;
+  }
+
+  .appointment-header h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .appointment-grid,
+  .appointment-field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-grid {
+    gap: 1rem;
+  }
+
+  .appointment-notice {
+    position: static;
   }
 
   .mobile-quick-actions {
@@ -1165,12 +1369,9 @@ main {
     display: inline-flex;
   }
 
-  .brand-copy-desktop {
-    display: none;
-  }
-
   .brand {
     width: auto;
+    gap: 0.55rem;
   }
 
   .brand-logo {
@@ -1264,12 +1465,6 @@ main {
     left: 0.75rem;
     width: auto;
   }
-}
-
-/* Keep all primary page surfaces within the blue palette. */
-.site-header,
-.mobile-nav-panel {
-  background: #edf6ff;
 }
 
 .hero {
