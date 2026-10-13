@@ -182,7 +182,7 @@ export default function HomePage() {
               <h2 className="section-title">We care for your dental health</h2>
               <div className="copy-stack">
                 <p>
-                  Located at Kiambaa, Kiambu County, Trace Dental Clinic offers preventive, restorative, and family-focused dental services.
+                  Located at Coopa Stage (opposite Jackmill Express Supermarket), Kiambu County, Trace Dental Clinic offers preventive, restorative, and family-focused dental services.
                 </p>
                 <p>
                   Our care is centered on comfort, clear communication, and treatment that supports healthy smiles at every stage of life.
@@ -224,7 +224,7 @@ export default function HomePage() {
                 <img className="brand-logo brand-logo-footer" src="/assets/images/trace-logo.jpg" alt="Trace Dental Clinic logo" />
                 <span className="brand-copy">Trace Dental Clinic</span>
               </div>
-              <p>Kiambaa Stage, Kiambu County</p>
+              <p>Coopa Stage (opposite Jackmill Express Supermarket), Kiambu County</p>
               <p>+254795512428</p>
               <p>tracemedicalcentre@gmail.com</p>
             </div>
@@ -266,7 +266,7 @@ export default function HomePage() {
         </Link>
 
         <a
-          href="https://www.google.com/maps/search/?api=1&query=Trace+Dental+Clinic+Kiambaa+Kiambu"
+          href="https://www.google.com/maps/search/?api=1&query=Coopa+Stage+opposite+Jackmill+Express+Supermarket+Kiambu+County"
           className="mobile-quick-action"
           target="_blank"
           rel="noreferrer"
