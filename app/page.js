@@ -244,7 +244,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2025 Trace Dental Clinic</span>
+            <span>© 2026 Trace Dental Clinic</span>
           </div>
         </div>
       </footer>
