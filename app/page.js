@@ -253,6 +253,36 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <nav className="mobile-quick-actions" aria-label="Quick actions">
+        <a href="tel:+254795512428" className="mobile-quick-action">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+          </svg>
+          <span>Phone</span>
+        </a>
+
+        <Link href="/appointment" className="mobile-quick-action">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2v4M18 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+            <path d="M8 13h2M14 13h2M8 17h2M14 17h2" />
+          </svg>
+          <span>Book Online</span>
+        </Link>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Trace+Dental+Clinic+Kiambaa+Kiambu"
+          className="mobile-quick-action"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+          <span>Directions</span>
+        </a>
+      </nav>
     </>
   );
 }
