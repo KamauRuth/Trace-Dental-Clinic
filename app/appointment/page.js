@@ -28,36 +28,21 @@ const services = [
 
 export default function AppointmentPage() {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState('idle');
-  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setStatus('submitting');
-    setMessage('');
 
-    try {
-      const response = await fetch('/api/appointment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(form),
-      });
+    const whatsappMessage = [
+      'Hello Trace Dental Clinic, I would like to book an appointment.',
+      '',
+      `Full name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone number: ${form.contact}`,
+      `Preferred date: ${form.date}`,
+      `Dental service: ${form.service}`,
+    ].join('\n');
 
-      const result = await response.json();
-
-      if (!response.ok || result.result !== 'success') {
-        throw new Error(result.message || 'Failed to create appointment.');
-      }
-
-      setStatus('success');
-      setMessage('Thank you. Your appointment has been submitted successfully.');
-      setForm(initialForm);
-    } catch (error) {
-      setStatus('error');
-      setMessage(error.message || 'Unexpected error while submitting the form.');
-    }
+    window.location.href = `https://wa.me/254795512428?text=${encodeURIComponent(whatsappMessage)}`;
   };
 
   return (
@@ -114,9 +99,7 @@ export default function AppointmentPage() {
                 </label>
               </div>
               <div className="button-row">
-                <button className="button" type="submit" disabled={status === 'submitting'}>
-                  {status === 'submitting' ? 'Submitting...' : 'Book appointment'}
-                </button>
+                <button className="button" type="submit">Book appointment</button>
                 <Link href="/" className="button-secondary">Back home</Link>
               </div>
             </div>
@@ -127,17 +110,12 @@ export default function AppointmentPage() {
             <p className="appointment-step">Step 2</p>
             <h3>What happens next?</h3>
             <p>
-              After submission, our team will review your request and confirm your appointment.
+              Your details will open in WhatsApp as a pre-filled message. Review and send it to our team to request your appointment.
             </p>
             <div className="appointment-contact">
               <span>Need help booking?</span>
               <a href="tel:+254795512428">Call +254 795 512 428</a>
             </div>
-            {message ? (
-              <div className={`alert ${status === 'success' ? 'alert-success' : 'alert-error'}`} style={{ marginTop: '1rem' }}>
-                {message}
-              </div>
-            ) : null}
           </aside>
         </div>
       </div>

@@ -403,6 +403,12 @@ main {
   color: #111111;
 }
 
+@media (min-width: 961px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+  }
+}
+
 .hero-title em {
   color: inherit;
   font-style: normal;
